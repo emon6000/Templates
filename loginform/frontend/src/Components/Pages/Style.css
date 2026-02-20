@@ -1,0 +1,156 @@
+.wrapper {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(30px);
+  border-radius: 8px;
+  color: #000;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  transition: height 0.2s ease;
+}
+/* Apply styles to Logout, Login, and Register buttons */
+.logout-btn, 
+.form-box button {
+  width: 100%;
+  height: 45px;
+  background: #fff;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  font-size: 16px;
+  color: #333;
+  font-weight: 700;
+  margin-top: 30px;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect for all buttons */
+.logout-btn:hover, 
+.form-box button:hover {
+  background: #f1f1f1;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Click effect for all buttons */
+.logout-btn:active, 
+.form-box button:active {
+  transform: translateY(0);
+}
+
+/* Your existing wrapper and animation styles */
+.wrapper.active {
+  height: 500px;
+}
+.wrapper .form-box {
+  width: 100%;
+  padding: 40px;
+}
+.wrapper .form-box.login { /* Fixed typo here from 'wrappe' to 'wrapper' */
+  transition: translate 0.18s ease;
+  translate: 0;
+}
+.wrapper.active .form-box.login {
+  transition: none;
+  translate: -400px;
+}
+.wrapper .form-box.register {
+  position: absolute;
+  transition: none;
+  translate: 400px;
+}
+.wrapper.active .form-box.register {
+  transition: translate 0.18s ease;
+  translate: 0;
+}
+
+form h1 {
+  font-size: 36px;
+  color: #fff;
+  text-align: center;
+}
+form .input-box {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  margin: 30px 0;
+}
+.input-box input {
+  /* position: absolute; */
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  padding: 20px 40px 20px 20px;
+  font-size: 18px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  outline: none;
+  color: #fff;
+}
+.input-box input::placeholder {
+  color: #fff;
+}
+.input-box .icon {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  /* transform: translateY(-50%); */
+  translate: 0 -50%;
+  color: #fff;
+  font-size: 16px;
+}
+
+form .remember-forgot {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin: -15px 0 15px;
+  color: #fff;
+}
+.remember-forgot label input {
+  accent-color: #fff;
+  margin-right: 5px;
+}
+.remember-forgot a {
+  color: #fff;
+  text-decoration: none;
+}
+.remember-forgot a:hover {
+  text-decoration: underline;
+}
+form button {
+  width: 100%;
+  height: 40px;
+  background: #fff;
+  border: none;
+  outline: none;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: #000;
+  font-size: 16px;
+  color: #333;
+  font-weight: 700;
+}
+form button:hover {
+  background: #f0f0f0;
+}
+
+form .register-link {
+  margin: 8px 0 15px;
+  text-align: center;
+  font-size: 14px;
+  color: #fff;
+}
+.register-link p a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+.register-link p a:hover {
+  text-decoration: underline;
+}
